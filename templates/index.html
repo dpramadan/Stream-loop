@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Streaming Panel</title>
+</head>
+<body class="bg-gray-900 text-white p-4">
+  <div class="max-w-xl mx-auto space-y-4">
+    <h1 class="text-2xl font-bold">🎥 Streaming Panel 24 Jam</h1>
+    
+    <input type="text" id="url" placeholder="RTMP URL" class="w-full p-2 rounded bg-gray-800"/>
+    <input type="text" id="key" placeholder="Stream Key" class="w-full p-2 rounded bg-gray-800"/>
+    <input type="number" id="duration" placeholder="Durasi (jam)" class="w-full p-2 rounded bg-gray-800"/>
+    
+    <div class="flex gap-2">
+      <button onclick="startStream()" class="bg-green-600 p-2 rounded w-full">▶️ Start</button>
+      <button onclick="stopStream()" class="bg-red-600 p-2 rounded w-full">⛔ Stop</button>
+    </div>
+    
+    <h2 class="text-xl mt-4">📋 Log Streaming</h2>
+    <pre id="log" class="bg-gray-800 p-2 rounded h-60 overflow-y-auto text-sm"></pre>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
